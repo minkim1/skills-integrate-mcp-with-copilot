@@ -24,8 +24,35 @@ header {
   border-radius: 5px;
 }
 
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header .header-title {
+  flex: 1;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.user-icon {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 24px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.user-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
 }
 
 main {
@@ -186,6 +213,87 @@ button:hover {
   background-color: #d1ecf1;
   color: #0c5460;
   border: 1px solid #bee5eb;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #1a237e;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: auto;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+#login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.btn-login {
+  width: 100%;
+}
+
+#login-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#login-message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+#login-message.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
 }
 
 .hidden {
